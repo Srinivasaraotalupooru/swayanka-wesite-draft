@@ -1,0 +1,12 @@
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/bin/Debug/net10.0/Swayanka.Shared.Kernel.deps.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/bin/Debug/net10.0/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/bin/Debug/net10.0/Swayanka.Shared.Kernel.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.AssemblyInfoInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.AssemblyInfo.cs
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.csproj.CoreCompileInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.sourcelink.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/refint/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/Swayanka.Shared.Kernel.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Shared/Swayanka.Shared.Kernel/obj/Debug/net10.0/ref/Swayanka.Shared.Kernel.dll

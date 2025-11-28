@@ -1,0 +1,16 @@
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/bin/Debug/net10.0/Swayanka.Modules.Ordering.deps.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/bin/Debug/net10.0/Swayanka.Modules.Ordering.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/bin/Debug/net10.0/Swayanka.Modules.Ordering.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/bin/Debug/net10.0/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/bin/Debug/net10.0/Swayanka.Shared.Kernel.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.csproj.AssemblyReference.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.AssemblyInfoInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.AssemblyInfo.cs
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.csproj.CoreCompileInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.sourcelink.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.5254218B.Up2Date
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/refint/Swayanka.Modules.Ordering.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/Swayanka.Modules.Ordering.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Ordering/obj/Debug/net10.0/ref/Swayanka.Modules.Ordering.dll
