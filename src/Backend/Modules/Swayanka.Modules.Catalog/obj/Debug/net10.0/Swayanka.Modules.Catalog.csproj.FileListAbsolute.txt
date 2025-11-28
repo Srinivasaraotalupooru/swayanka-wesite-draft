@@ -1,0 +1,16 @@
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/bin/Debug/net10.0/Swayanka.Modules.Catalog.deps.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/bin/Debug/net10.0/Swayanka.Modules.Catalog.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/bin/Debug/net10.0/Swayanka.Modules.Catalog.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/bin/Debug/net10.0/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/bin/Debug/net10.0/Swayanka.Shared.Kernel.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.csproj.AssemblyReference.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.AssemblyInfoInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.AssemblyInfo.cs
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.csproj.CoreCompileInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.sourcelink.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.264FA07E.Up2Date
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/refint/Swayanka.Modules.Catalog.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/Swayanka.Modules.Catalog.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Catalog/obj/Debug/net10.0/ref/Swayanka.Modules.Catalog.dll

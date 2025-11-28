@@ -1,0 +1,6 @@
+@Swayanka.API_HostAddress = http://localhost:5087
+
+GET {{Swayanka.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
