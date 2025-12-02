@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0-preview.5.25277.114" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,6 +20,7 @@
     <ProjectReference Include="..\Modules\Swayanka.Modules.Catalog\Swayanka.Modules.Catalog.csproj" />
     <ProjectReference Include="..\Modules\Swayanka.Modules.Ordering\Swayanka.Modules.Ordering.csproj" />
     <ProjectReference Include="..\Shared\Swayanka.Shared.Kernel\Swayanka.Shared.Kernel.csproj" />
+    <ProjectReference Include="..\Modules\Swayanka.Modules.Identity\Swayanka.Modules.Identity.csproj" />
   </ItemGroup>
 
 </Project>

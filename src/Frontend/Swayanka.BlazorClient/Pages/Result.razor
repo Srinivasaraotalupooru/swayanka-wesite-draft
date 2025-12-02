@@ -1,0 +1,99 @@
+@page "/result/{ProductId:guid}"
+@using Swayanka.BlazorClient.Components.UI
+@inject NavigationManager Navigation
+@inject HttpClient Http
+
+@if (product == null)
+{
+    <div class="flex justify-center items-center h-screen">
+        <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
+    </div>
+}
+else
+{
+    <div class="min-h-screen pt-24 pb-12 bg-white px-4 animate-in fade-in slide-in-from-bottom-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative rounded-[3rem] bg-gray-50 aspect-square flex items-center justify-center p-12 overflow-hidden shadow-inner">
+                <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent opacity-70"></div>
+                <GarmentSVG Type="@product.Category" Color="@product.ColorHex" Class="w-full h-full drop-shadow-2xl animate-in zoom-in duration-1000" />
+            </div>
+            <div>
+                <div class="flex items-center gap-3 mb-6"><span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold uppercase tracking-wide">Your Match</span><span class="text-gray-400 text-sm">@product.Gender • @product.Fabric</span></div>
+                <h1 class="text-5xl font-black text-gray-900 mb-6 leading-tight">@product.Name</h1>
+                <p class="text-xl text-gray-500 mb-8 leading-relaxed border-l-4 border-purple-500 pl-6">@product.Description</p>
+                <div class="mb-10">
+                    <h3 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4">Select Size</h3>
+                    <div class="flex gap-4">
+                        @foreach (var size in new[] { "S", "M", "L", "XL" })
+                        {
+                            <button @onclick="@(() => selectedSize = size)" class="@GetSizeButtonClass(size)">@size</button>
+                        }
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 border-t border-gray-100 pt-8">
+                    <div class="text-3xl font-bold text-gray-900">₹@product.Price</div>
+                    <Button OnClick="HandleAddToCart" disabled="@(selectedSize == null)" Class="flex-1">
+                        @(selectedSize != null ? "Add to Collection" : "Select Size")
+                    </Button>
+                </div>
+                <button @onclick="@(() => Navigation.NavigateTo("/story"))" class="mt-6 text-sm text-gray-400 hover:text-gray-900 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+                    Start a new story
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public Guid ProductId { get; set; }
+    private ProductDto? product;
+    private string? selectedSize;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await Http.GetFromJsonAsync<ProductDto>($"api/products/{ProductId}");
+    }
+
+    private string GetSizeButtonClass(string size)
+    {
+        var baseClass = "w-16 h-16 rounded-2xl text-lg font-bold flex items-center justify-center transition-all border-2";
+        if (selectedSize == size)
+        {
+            return $"{baseClass} border-purple-600 bg-purple-600 text-white shadow-lg transform scale-110";
+        }
+        return $"{baseClass} border-gray-100 text-gray-400 hover:border-purple-200 hover:text-purple-600";
+    }
+
+    private async Task HandleAddToCart()
+    {
+        if (selectedSize == null || product == null) return;
+
+        var userId = "guest-user"; // Hardcoded for now
+        var item = new
+        {
+            ProductId = product.Id,
+            ProductName = product.Name,
+            UnitPrice = product.Price,
+            Quantity = 1,
+            Size = selectedSize,
+            ColorHex = product.ColorHex,
+            Category = product.Category
+        };
+
+        await Http.PostAsJsonAsync($"api/cart/{userId}/items", item);
+        Navigation.NavigateTo("/cart");
+    }
+
+    public class ProductDto
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string Gender { get; set; } = "";
+        public string Fabric { get; set; } = "";
+        public string Category { get; set; } = "";
+        public string ColorHex { get; set; } = "";
+        public decimal Price { get; set; }
+    }
+}

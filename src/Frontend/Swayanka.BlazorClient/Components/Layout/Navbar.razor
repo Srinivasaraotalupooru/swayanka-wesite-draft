@@ -1,0 +1,43 @@
+@using Swayanka.BlazorClient.Components.UI
+@inject NavigationManager Navigation
+
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <div @onclick="@(() => Navigation.NavigateTo("/"))" class="cursor-pointer flex items-center gap-2 group">
+            <SwayankaLogo Class="h-10 w-auto" />
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-6">
+            <button @onclick="@(() => Navigation.NavigateTo("/"))" class="text-sm font-medium text-gray-500 hover:text-purple-600 transition-colors hidden sm:block">
+                Restart Story
+            </button>
+
+            @* Profile Button *@
+            <button @onclick="@(() => Navigation.NavigateTo("/profile"))" class="p-2 hover:bg-purple-50 rounded-full transition-colors group" title="Account">
+                @if (User != null)
+                {
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600 fill-purple-100"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                }
+                else
+                {
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700 group-hover:text-purple-600"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                }
+            </button>
+
+            <button @onclick="@(() => Navigation.NavigateTo("/cart"))" class="relative p-2 hover:bg-purple-50 rounded-full transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700 group-hover:text-purple-600"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                @if (CartCount > 0)
+                {
+                    <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-purple-600 rounded-full">
+                        @CartCount
+                    </span>
+                }
+            </button>
+        </div>
+    </div>
+</nav>
+
+@code {
+    [Parameter] public int CartCount { get; set; }
+    [Parameter] public object? User { get; set; } // Placeholder for now
+}
