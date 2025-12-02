@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Swayanka.Modules.Catalog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0cf17af7dc4881095e6afbd20eaa3d0eb5154fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa6398d046aa40c422d907bae0e9606864c51b5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Swayanka.Modules.Catalog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Swayanka.Modules.Catalog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

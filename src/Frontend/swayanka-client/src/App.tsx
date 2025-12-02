@@ -7,10 +7,14 @@ import { Cart } from './pages/Cart';
 import { Profile } from './pages/Profile';
 import { useEffect, useState } from 'react';
 import { getCart } from './api';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
-function App() {
+// Inner component to access AuthContext
+const AppContent = () => {
   const [cartCount, setCartCount] = useState(0);
-  const userId = 'guest-user';
+  const { user } = useAuth();
+  const userId = user ? user.id : 'guest-user';
 
   // Simple polling for cart count for demo purposes
   useEffect(() => {
@@ -25,12 +29,11 @@ function App() {
     fetchCart();
     const interval = setInterval(fetchCart, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [userId]);
 
   return (
-    <Router>
       <div className="font-sans text-gray-900 selection:bg-purple-100 selection:text-purple-900">
-        <Navbar cartCount={cartCount} user={{ name: 'Guest' }} />
+        <Navbar cartCount={cartCount} user={user} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/story" element={<Story />} />
@@ -39,7 +42,21 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
-    </Router>
+  );
+};
+
+function App() {
+  // REPLACE WITH YOUR ACTUAL GOOGLE CLIENT ID
+  const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+
+  return (
+    <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+      <AuthProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </AuthProvider>
+    </GoogleOAuthProvider>
   );
 }
 

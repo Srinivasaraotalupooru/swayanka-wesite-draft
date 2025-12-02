@@ -1,0 +1,23 @@
+﻿@inherits LayoutComponentBase
+@using Swayanka.BlazorClient.Components.Layout
+@inject Swayanka.BlazorClient.Services.AuthService AuthService
+
+<div class="min-h-screen bg-white font-sans text-gray-900 antialiased selection:bg-purple-100 selection:text-purple-900">
+    <Navbar CartCount="0" User="@(AuthService.IsAuthenticated ? new { Name = "User" } : null)" />
+    
+    <main>
+        @Body
+    </main>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        AuthService.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        AuthService.OnChange -= StateHasChanged;
+    }
+}

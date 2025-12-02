@@ -2,46 +2,74 @@ import React, { useEffect, useState } from 'react';
 import { Package, Clock, LogOut, ShieldCheck, User } from 'lucide-react';
 import { GarmentSVG } from '../components/ui/GarmentSVG';
 import { getOrders } from '../api';
+import { useAuth } from '../context/AuthContext';
+import { GoogleLogin } from '@react-oauth/google';
 
 export const Profile: React.FC = () => {
+  const { user, login, logout, isAuthenticated } = useAuth();
   const [orders, setOrders] = useState<any[]>([]);
-  const userId = 'guest-user';
 
   useEffect(() => {
-    const loadOrders = async () => {
-        const data = await getOrders(userId);
-        setOrders(data);
-    };
-    loadOrders();
-  }, []);
+    if (isAuthenticated && user) {
+      const loadOrders = async () => {
+          const data = await getOrders(user.id);
+          setOrders(data);
+      };
+      loadOrders();
+    } else {
+        setOrders([]);
+    }
+  }, [isAuthenticated, user]);
 
   return (
-    <div className="min-h-screen pt-24 px-4 bg-gray-50 pb-12">
+    <div className="min-h-screen pt-32 px-4 bg-gray-50 pb-12">
       <div className="max-w-4xl mx-auto">
         
         {/* Identity Card */}
         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 mb-8 flex flex-col md:flex-row items-center md:items-start gap-8">
-           <div className="w-24 h-24 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-3xl font-bold border-4 border-white shadow-lg">
-              <User size={40} />
+           <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center text-black text-3xl font-bold border-4 border-white shadow-lg overflow-hidden">
+              {user?.pictureUrl ? <img src={user.pictureUrl} alt={user.name} className="w-full h-full object-cover" /> : <User size={40} />}
            </div>
            <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-gray-900">Guest User</h2>
-              <p className="text-gray-500 mb-4">guest@swayanka.com</p>
-              <div className="flex gap-4 justify-center md:justify-start">
-                <button className="flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium">
-                   <ShieldCheck size={16} /> Verified Account
-                </button>
-                <button className="flex items-center gap-2 px-4 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 hover:text-red-600 transition-colors">
-                   <LogOut size={16} /> Sign Out
-                </button>
-              </div>
+              {isAuthenticated && user ? (
+                <>
+                  <h2 className="text-3xl font-bold text-gray-900">{user.name}</h2>
+                  <p className="text-gray-500 mb-4">{user.email}</p>
+                  <div className="flex gap-4 justify-center md:justify-start">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-black rounded-lg text-sm font-medium">
+                       <ShieldCheck size={16} /> Verified Account
+                    </button>
+                    <button onClick={logout} className="flex items-center gap-2 px-4 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 hover:text-red-600 transition-colors">
+                       <LogOut size={16} /> Sign Out
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-3xl font-bold text-gray-900">Guest User</h2>
+                  <p className="text-gray-500 mb-6 max-w-md">Sign in to track your orders and save your preferences.</p>
+                  <div className="flex justify-center md:justify-start">
+                    <GoogleLogin
+                        onSuccess={credentialResponse => {
+                            if (credentialResponse.credential) {
+                                login(credentialResponse.credential);
+                            }
+                        }}
+                        onError={() => {
+                            console.log('Login Failed');
+                        }}
+                    />
+                  </div>
+                </>
+              )}
            </div>
         </div>
 
         {/* Order History */}
+        {isAuthenticated && (
         <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
            <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-             <Package className="text-purple-600" /> Order History
+             <Package className="text-black" /> Order History
            </h3>
            
            {orders.length === 0 ? (
@@ -77,6 +105,7 @@ export const Profile: React.FC = () => {
              </div>
            )}
         </div>
+        )}
       </div>
     </div>
   );

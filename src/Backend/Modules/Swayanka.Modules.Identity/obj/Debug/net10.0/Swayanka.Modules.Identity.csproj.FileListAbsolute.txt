@@ -1,0 +1,16 @@
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.csproj.AssemblyReference.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.AssemblyInfoInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.AssemblyInfo.cs
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.csproj.CoreCompileInputs.cache
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.sourcelink.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/bin/Debug/net10.0/Swayanka.Modules.Identity.deps.json
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/bin/Debug/net10.0/Swayanka.Modules.Identity.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/bin/Debug/net10.0/Swayanka.Modules.Identity.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/bin/Debug/net10.0/Swayanka.Shared.Kernel.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/bin/Debug/net10.0/Swayanka.Shared.Kernel.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.78CA40AB.Up2Date
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/refint/Swayanka.Modules.Identity.dll
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/Swayanka.Modules.Identity.pdb
+/Users/bhavanaerimbi/Source/swayanka-wesite-draft/src/Backend/Modules/Swayanka.Modules.Identity/obj/Debug/net10.0/ref/Swayanka.Modules.Identity.dll
